@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.lotto.LottoBall;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -8,29 +10,9 @@ import java.util.Collections;
 public class Main {
     public static void main(String[] args) {
 
+        LottoBall b1 = new LottoBall(10);
 
-        ArrayList<Integer> list = new ArrayList<>();
-
-        //인덱스 번호 몰라도 되요
-        list.add(30);
-        list.add(44);
-        list.add(11);
-        list.add(21);
-        list.add(31);
-        list.add(41);
-
-
-        //Arrays.toString() 배열의 내용물
-        System.out.println(list);
-        System.out.println(list.size());
-
-        System.out.println("------------------------");
-        list.remove(Integer.valueOf(44));
-
-        Collections.sort(list); //Dual-pivot QuickSort Java 7 부터
-
-        System.out.println(list);
-        System.out.println(list.size());
+        System.out.println(b1);
 
     }
 }
