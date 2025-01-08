@@ -9,9 +9,6 @@ import lombok.ToString;
 @AllArgsConstructor
 public class LottoBall {
 
-
-
     int num;
-
 
 }
