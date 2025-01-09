@@ -4,9 +4,11 @@ import org.example.calc.Calc1;
 import org.example.knn.Point;
 import org.example.lotto.LottoBall;
 import org.example.save.PiggySave;
+import org.example.snakegame.Tile;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 
 public class Main {
@@ -25,22 +27,40 @@ public class Main {
 
     public static void main(String[] args) {
 
-        PiggySave my = new PiggySave();
+        //준비물
+        ArrayList<Tile> tiles = new ArrayList<>();
 
-        PiggySave your = new PiggySave();
+        for (int i = 1; i <= 100 ; i++) {
+            Tile tile = new Tile(i);
+            tiles.add(tile);
+        }
+
+        System.out.println(tiles);
+
+        //지금 현재 위치를 알아야 한다.
+        int current = 0;
+        Scanner scanner = new Scanner(System.in);
+
+        //로직
+        System.out.println("마음의 준비를 하시고 Enter");
 
 
-
-        my.deposit(1000);
-        my.deposit(3000);
-        my.deposit(5000); //9000
-
-        your.deposit(500);
-        your.deposit(1000);
-
-        System.out.println(my.withdraw());
-
-        System.out.println(your.withdraw());
+//        PiggySave my = new PiggySave();
+//
+//        PiggySave your = new PiggySave();
+//
+//
+//
+//        my.deposit(1000);
+//        my.deposit(3000);
+//        my.deposit(5000); //9000
+//
+//        your.deposit(500);
+//        your.deposit(1000);
+//
+//        System.out.println(my.withdraw());
+//
+//        System.out.println(your.withdraw());
 
 
 //        System.out.println(Calc1.plus(10,20));
