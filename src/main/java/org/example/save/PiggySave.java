@@ -4,6 +4,7 @@ public class PiggySave {
 
     private int total;
 
+
     public void deposit(int amount){
         this.total += amount;
     }
