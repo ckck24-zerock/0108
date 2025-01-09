@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.calc.Calc1;
 import org.example.knn.Point;
 import org.example.lotto.LottoBall;
 
@@ -23,7 +24,17 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println(Calc1.plus(10,20));
 
+        System.out.println(Math.random()); //0.0 ~0.99999
+
+//        Point p1 = new Point(1,1);
+//        Point p2 = new Point(5,5);
+//
+//        double distance = calcDistance(p1, p2);
+//
+//        System.out.println(distance);
+//
 //        ArrayList<LottoBall> balls = new ArrayList<>();
 //
 //        for(int i = 1; i <= 45; i++){
