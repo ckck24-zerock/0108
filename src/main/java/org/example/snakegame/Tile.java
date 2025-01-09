@@ -5,9 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
+
 @ToString
-@Setter
+
 public class Tile {
 
     private int num;
@@ -19,4 +19,31 @@ public class Tile {
         this.num = num;
     }
 
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setMoving(int moving) {
+        this.moving = moving;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getMoving() {
+        return moving;
+    }
 }

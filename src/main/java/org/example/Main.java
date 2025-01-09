@@ -117,19 +117,53 @@ public class Main {
 
         //snake
         tiles.get(21) .setDesc(" 20 - 스케이트를 지정 장소가 아닌 언 호수에서 타다가 얼음이 깨져 빠졌다.");
-        tiles.get(28) .setDesc(" 22 - 공부를 열심히 안 해 훗날 거지가 되었다(...).");
-        tiles.get(29) .setDesc(" 20 - 벽에 낙서를 해서[14] 한 여자한테[15] 스팽킹을 당했다(...).");
-        tiles.get(43) .setDesc(" 18 - 친구를 폭행해서 경찰에게 용서를 빌으며 깽값을 물어주게 되었다.");
-        tiles.get(57) .setDesc(" 16 - 개를 발로 찼다가 개한테 쫓기게 된다(...).");
-        tiles.get(65) .setDesc(" 52 - 여자를 성추행해서 감옥에 갇혔다.");
-        tiles.get(67) .setDesc(" 16 - 과식해서 배탈이 났다. 당시 시대상을 생각하면 불량식품에 관한 내용으로도 해석할 수 있다.");
-        tiles.get(71) .setDesc(" 22 - 불발탄을 가지고 놀다가 폭발해서 다친다.");
-        tiles.get(83) .setDesc(" 22 - 기찻길에서 놀다가 기차에 치일 위기에 처한다.");
-        tiles.get(93) .setDesc(" 30 - 지푸라기에 불을 붙이는 불장난을 하는 바람에 화재가 났다.");
-        tiles.get(95) .setDesc(" 14 - 나무를 너무 많이 베어서 홍수가 나 휩쓸린다.");
-        tiles.get(97) .setDesc(" 20 - 나무에 올라갔다가 추락했다.");
+        tiles.get(21).setType("뱀");
+        tiles.get(21).setMoving(20);
 
-        System.out.println(tiles);
+        tiles.get(28) .setDesc(" 22 - 공부를 열심히 안 해 훗날 거지가 되었다(...).");
+        tiles.get(28).setType("뱀");
+        tiles.get(28).setMoving(22);
+
+        tiles.get(29) .setDesc(" 20 - 벽에 낙서를 해서[14] 한 여자한테[15] 스팽킹을 당했다(...).");
+        tiles.get(29).setType("뱀");
+        tiles.get(29).setMoving(20);
+
+        tiles.get(43) .setDesc(" 18 - 친구를 폭행해서 경찰에게 용서를 빌으며 깽값을 물어주게 되었다.");
+        tiles.get(43).setType("뱀");
+        tiles.get(43).setMoving(18);
+
+        tiles.get(57) .setDesc(" 16 - 개를 발로 찼다가 개한테 쫓기게 된다(...).");
+        tiles.get(57).setType("뱀");
+        tiles.get(57).setMoving(16);
+
+        tiles.get(65) .setDesc(" 52 - 여자를 성추행해서 감옥에 갇혔다.");
+        tiles.get(65).setType("뱀");
+        tiles.get(65).setMoving(52);
+
+        tiles.get(67) .setDesc(" 16 - 과식해서 배탈이 났다. 당시 시대상을 생각하면 불량식품에 관한 내용으로도 해석할 수 있다.");
+        tiles.get(67).setType("뱀");
+        tiles.get(67).setMoving(16);
+
+        tiles.get(71) .setDesc(" 22 - 불발탄을 가지고 놀다가 폭발해서 다친다.");
+        tiles.get(71).setType("뱀");
+        tiles.get(71).setMoving(22);
+
+        tiles.get(83) .setDesc(" 22 - 기찻길에서 놀다가 기차에 치일 위기에 처한다.");
+        tiles.get(83).setType("뱀");
+        tiles.get(83).setMoving(22);
+
+        tiles.get(93) .setDesc(" 30 - 지푸라기에 불을 붙이는 불장난을 하는 바람에 화재가 났다.");
+        tiles.get(93).setType("뱀");
+        tiles.get(93).setMoving(30);
+
+        tiles.get(95) .setDesc(" 14 - 나무를 너무 많이 베어서 홍수가 나 휩쓸린다.");
+        tiles.get(95).setType("뱀");
+        tiles.get(95).setMoving(14);
+
+        tiles.get(97) .setDesc(" 20 - 나무에 올라갔다가 추락했다.");
+        tiles.get(97).setType("뱀");
+        tiles.get(97).setMoving(20);
+
 
         //지금 현재 위치를 알아야 한다.
         int current = 0;
@@ -163,10 +197,21 @@ public class Main {
             if(currentTile.getDesc() != null){
                 //화면에 desc의 내용을 출력
 
+                int moving = currentTile.getMoving();
+                String type = currentTile.getType();
+
                 //어떤 방향으로 얼마나 이동해야 하는지 알아야 한다.
 
                 //current 위치 바꿔줘야 한다.
+                if(type.equals("고속도로")) {
+                    current = current + moving;
+                }else {
+                    current = current - moving;
+                }
 
+                Tile dest = tiles.get(current);
+
+                System.out.println(dest);
                 //다시 해당 위치의 타일을 가져와서 출력해야 한다.
             }
 
