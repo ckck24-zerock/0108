@@ -41,9 +41,27 @@ public class Main {
         int current = 0;
         Scanner scanner = new Scanner(System.in);
 
-        //로직
-        System.out.println("마음의 준비를 하시고 Enter");
+        while(true) {
+            //로직
+            System.out.println("마음의 준비를 하시고 Enter");
+            scanner.nextLine();
 
+            //주사위 굴리기 - value
+            int value = Calc1.roll();
+            System.out.println("주사위 눈은 :" + value);
+
+            //어떤 타일을 가져와야 하나?  current + value 의 타일을 가져와야 한다.
+            current = current + value;
+            System.out.println("현재 위치: " + current);
+
+            //만일 current+value 전체 99보다 크면 break
+            if(current > 99){
+                System.out.println("Game over");
+                break;
+            }
+
+            //current 는 current + value
+        }
 
 //        PiggySave my = new PiggySave();
 //
