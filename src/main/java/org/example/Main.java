@@ -62,7 +62,7 @@ public class Main {
             tiles.add(tile);
         }
 
-        tiles.get(3) .setDesc(" 12 - 노인에게 길을 비켜주어 노인에게 칭찬받았다.");
+        tiles.get(3).setDesc(" 12 - 노인에게 길을 비켜주어 노인에게 칭찬받았다.");
         tiles.get(7) .setDesc(" 14 - 열심히 역도 훈련을 해서 트로피를 받았다.");
         tiles.get(17) .setDesc(" 20 - 나무를 심어서 후에 숲을 만들었다.");
         tiles.get(19) .setDesc(" 54 - 경찰에게 범죄자가 있다고 신고한 뒤 표창장을 받았다.");
@@ -113,6 +113,11 @@ public class Main {
                 System.out.println("Game over");
                 break;
             }
+
+            Tile currentTile = tiles.get(current);
+
+            System.out.println("=========================================");
+            System.out.println(currentTile);
 
             //current 는 current + value
         }
