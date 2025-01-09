@@ -62,20 +62,60 @@ public class Main {
             tiles.add(tile);
         }
 
+        //highway
         tiles.get(3).setDesc(" 12 - 노인에게 길을 비켜주어 노인에게 칭찬받았다.");
-        tiles.get(7) .setDesc(" 14 - 열심히 역도 훈련을 해서 트로피를 받았다.");
-        tiles.get(17) .setDesc(" 20 - 나무를 심어서 후에 숲을 만들었다.");
-        tiles.get(19) .setDesc(" 54 - 경찰에게 범죄자가 있다고 신고한 뒤 표창장을 받았다.");
-        tiles.get(23) .setDesc(" 12 - 환자를 치료하는 연습을 한 뒤 의사가 되었다.");
-        tiles.get(31) .setDesc(" 24 - 공부를 열심히 해서 좋은 대학에 진학해 졸업했다.");
-        tiles.get(33) .setDesc(" 12 - 열심히 일하여 후에 큰돈을 모았다.");
-        tiles.get(39) .setDesc(" 20 - 닭에게 모이를 줘서 달걀을 많이 얻었다.");
-        tiles.get(47) .setDesc(" 6 - 청소를 열심히 한 후 남자에게 잘 보였다.");
-        tiles.get(69) .setDesc(" 18 - 농사를 열심히 지어서 많은 작물을 얻었다.");
-        tiles.get(75) .setDesc(" 10 - 학을 연구해 후에 화학자가 되었다.");
-        tiles.get(79) .setDesc(" 20 - 달리기에서 1등을 했다.");
-        tiles.get(89) .setDesc(" 2 - 공산군을 쫓아내고 전투에서 승리하였다.");
+        tiles.get(3).setType("고속도로");
+        tiles.get(3).setMoving(12);
 
+        tiles.get(7) .setDesc(" 14 - 열심히 역도 훈련을 해서 트로피를 받았다.");
+        tiles.get(7).setType("고속도로");
+        tiles.get(7).setMoving(14);
+
+        tiles.get(17) .setDesc(" 20 - 나무를 심어서 후에 숲을 만들었다.");
+        tiles.get(17).setType("고속도로");
+        tiles.get(17).setMoving(20);
+
+        tiles.get(19) .setDesc(" 54 - 경찰에게 범죄자가 있다고 신고한 뒤 표창장을 받았다.");
+        tiles.get(19).setType("고속도로");
+        tiles.get(19).setMoving(54);
+
+        tiles.get(23) .setDesc(" 12 - 환자를 치료하는 연습을 한 뒤 의사가 되었다.");
+        tiles.get(23).setType("고속도로");
+        tiles.get(23).setMoving(12);
+
+        tiles.get(31) .setDesc(" 24 - 공부를 열심히 해서 좋은 대학에 진학해 졸업했다.");
+        tiles.get(31).setType("고속도로");
+        tiles.get(31).setMoving(24);
+
+        tiles.get(33) .setDesc(" 12 - 열심히 일하여 후에 큰돈을 모았다.");
+        tiles.get(33).setType("고속도로");
+        tiles.get(33).setMoving(12);
+
+        tiles.get(39) .setDesc(" 20 - 닭에게 모이를 줘서 달걀을 많이 얻었다.");
+        tiles.get(39).setType("고속도로");
+        tiles.get(39).setMoving(20);
+
+        tiles.get(47) .setDesc(" 6 - 청소를 열심히 한 후 남자에게 잘 보였다.");
+        tiles.get(47).setType("고속도로");
+        tiles.get(47).setMoving(6);
+
+        tiles.get(69) .setDesc(" 18 - 농사를 열심히 지어서 많은 작물을 얻었다.");
+        tiles.get(69).setType("고속도로");
+        tiles.get(69).setMoving(18);
+
+        tiles.get(75) .setDesc(" 10 - 학을 연구해 후에 화학자가 되었다.");
+        tiles.get(75).setType("고속도로");
+        tiles.get(75).setMoving(10);
+
+        tiles.get(79) .setDesc(" 20 - 달리기에서 1등을 했다.");
+        tiles.get(79).setType("고속도로");
+        tiles.get(79).setMoving(20);
+
+        tiles.get(89) .setDesc(" 2 - 공산군을 쫓아내고 전투에서 승리하였다.");
+        tiles.get(89).setType("고속도로");
+        tiles.get(89).setMoving(2);
+
+        //snake
         tiles.get(21) .setDesc(" 20 - 스케이트를 지정 장소가 아닌 언 호수에서 타다가 얼음이 깨져 빠졌다.");
         tiles.get(28) .setDesc(" 22 - 공부를 열심히 안 해 훗날 거지가 되었다(...).");
         tiles.get(29) .setDesc(" 20 - 벽에 낙서를 해서[14] 한 여자한테[15] 스팽킹을 당했다(...).");
@@ -118,6 +158,17 @@ public class Main {
 
             System.out.println("=========================================");
             System.out.println(currentTile);
+
+            //타일 정보에 desc정보가 있다면 다른 곳으로 이동
+            if(currentTile.getDesc() != null){
+                //화면에 desc의 내용을 출력
+
+                //어떤 방향으로 얼마나 이동해야 하는지 알아야 한다.
+
+                //current 위치 바꿔줘야 한다.
+
+                //다시 해당 위치의 타일을 가져와서 출력해야 한다.
+            }
 
             //current 는 current + value
         }

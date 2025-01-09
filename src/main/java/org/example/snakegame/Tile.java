@@ -12,6 +12,8 @@ public class Tile {
 
     private int num;
     private String desc;
+    private String type;
+    private int moving;
 
     public Tile(int num) {
         this.num = num;
